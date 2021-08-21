@@ -2,7 +2,7 @@
 
 >### What do this code do?
     This is a JavaScript Command-Line-Interface quiz app. It checks how well you know 'Rishikesh' (Me).
-    It uses Javascript console to show output.
+    It uses a Javascript console to show output.
 
 ![LCOMascot](head.png)
 
