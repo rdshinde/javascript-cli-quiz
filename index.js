@@ -39,7 +39,7 @@ let questionBank = [
 ];
 
 // Defining function for welcome message.
-function welcomeMessage(){
+const welcomeMessage = () => {
   //Taking the input of players username
 const userName = readlineSync.question("What's your name?\n");
 
@@ -54,26 +54,26 @@ console.log(chalk.red(`\n\n  I hope you will enjoy it. :)\n  Best Of Luck!`));
 
 
 // Defining function for correct answer messages.
-function correctAnsMessage(score){
+const correctAnsMessage = score =>{
   // Creating array of messages for correct answers to give random message from it.
   const winMessages = ['Great Job!','Very Good!','Ohh! Nice Guess!','Nicely Done!','Ohh! You nailed it!','Correct!','You are doing great job!'];
   const random = Math.floor(Math.random() * winMessages.length); 
   console.log(chalk.green(winMessages[random],`\n Your Score is: ${score} \n --------------------------------------------`)); 
 }
 // Defining Function for wrong answer messages.
-function wrongAnsMessage(score){
+const wrongAnsMessage = score => {
   // Creating array of messages for wrong answers to give random message from it.
   const loseMessages = ['Oh no! you lose.','Wrong! Try to remember this.','You are losing the game!','You lose!'];
   const random = Math.floor(Math.random() * loseMessages.length); 
   console.log(chalk.redBright(loseMessages[random],`\n Your Score is: ${score} \n --------------------------------------------`)); 
 }
 // Function for end Message
-function endMessage(){
+const endMessage = () =>{
   console.log(` Your final score is: ${score}\n I hope you enjoyed the game. Thanks for participating.`)
 }
 
 // Main playGame function is defined here
-function playGame(){
+const playGame = () => {
   welcomeMessage();
   for(let i=0;i< questionBank.length;i++){
   var userAns = readlineSync.question(questionBank[i].question);
